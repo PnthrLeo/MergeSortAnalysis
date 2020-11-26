@@ -1,9 +1,5 @@
 import random
-from numpy import finfo, float32
-
-
-FLOAT32_MIN = float(finfo(float32).min)
-FLOAT32_MAX = float(finfo(float32).max)
+from ._custom_float32 import CustomFloat32, FLOAT32_MIN, FLOAT32_MAX
 
 
 class InputGenerator:
@@ -14,6 +10,6 @@ class InputGenerator:
         arr = []
         for i in range(self.input_size):
             num = random.uniform(FLOAT32_MIN, FLOAT32_MAX)
-            num = float32(num)
+            num = CustomFloat32(num)
             arr.append(num)
         return arr
