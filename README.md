@@ -1,2 +1,2 @@
 # MergeSortAnalysis
-Speed analysis of Merge Sort algorithm.
+Merge Sort empirical complexity analysis 📈
